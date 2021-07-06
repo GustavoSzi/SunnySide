@@ -25,14 +25,14 @@
   <header id="header">
     <a href="#home" class="logo"><img src="images/logo.svg"></a>
 
-
-    <i class='bx bx-menu'></i>
-    <ul>
-      <li class="item"><a href="#about">About</a></li>
-      <li class="item"><a href="#services">Services</a></li>
-      <li class="item"><a href="#projects">Projects</a></li>
-      <li class="item"><a href="#contact">Contact</a></li>
-    </ul>
+      <i class='bx bx-menu' id="menuBtn"></i>
+      <ul id="menu">
+        <li class="item"><a href="#about">About</a></li>
+        <li class="item"><a href="#services">Services</a></li>
+        <li class="item"><a href="#footerImages">Projects</a></li>
+        <li class="itemContact"><a href="#socials">Contact</a></li>
+        <li id="square"><div></div></li>
+      </ul>
   </header>
   
 
@@ -44,7 +44,7 @@
 
     <section class="section" id="about">
       <div id="card1">
-        <img src="images/mobile/image-transform.jpg">
+        <div class="image"></div>
         <div class="content">
           <h2 class="sectionTitle">Transform your brand</h2>
 
@@ -56,7 +56,7 @@
       </div>
 
       <div id="card2">
-        <img src="images/mobile/image-stand-out.jpg">
+        <div class="image"></div>
         <div class="content">
           <h2 class="sectionTitle">Stand out to the right audience</h2>
 
@@ -86,25 +86,27 @@
     <section class="section" id="testimonials">
         <h2 id="testimonialsTitle">Client testimonials</h2>
 
-        <div class="testCard">
-          <img src="images/image-emily.jpg">
-          <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
-          <h3 class="testName">Emily R.</h3>
-          <h3 class="testCompany">Marketing Director</h3>
-        </div>
+        <div id="cards">
+          <div class="testCard">
+            <img src="images/image-emily.jpg">
+            <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+            <h3 class="testName">Emily R.</h3>
+            <h3 class="testCompany">Marketing Director</h3>
+          </div>
 
-        <div class="testCard">
-          <img src="images/image-thomas.jpg">
-          <p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
-          <h3 class="testName">Thomas S.</h3>
-          <h3 class="testCompany">Chief Operating Officer</h3>
-        </div>
-        
-        <div class="testCard">
-          <img src="images/image-jennie.jpg">
-          <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
-          <h3 class="testName">Jennie F.</h3>
-          <h3 class="testCompany">Business Owner</h3>
+          <div class="testCard">
+            <img src="images/image-thomas.jpg">
+            <p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+            <h3 class="testName">Thomas S.</h3>
+            <h3 class="testCompany">Chief Operating Officer</h3>
+          </div>
+          
+          <div class="testCard">
+            <img src="images/image-jennie.jpg">
+            <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+            <h3 class="testName">Jennie F.</h3>
+            <h3 class="testCompany">Business Owner</h3>
+          </div>
         </div>
 
     </section>
@@ -113,18 +115,18 @@
 
   <footer>
     <div id="footerImages">
-      <img src="images/mobile/image-gallery-milkbottles.jpg" alt="Milk Bottles"> 
-      <img src="images/mobile/image-gallery-orange.jpg" alt="Half an orange on a plate">
-      <img src="images/mobile/image-gallery-cone.jpg" alt="Icecream cone">
-      <img src="images/mobile/image-gallery-sugar-cubes.jpg" alt="Cubes of sugar">
+      <div id="img1"></div>
+      <div id="img2"></div>
+      <div id="img3"></div>
+      <div id="img4"></div>
     </div>
 
     <div id="lists">
       <a href="#home" class="logo"><img src="images/logo.svg"></a>
       <ul id="links">
-        <li class="item"><a href="">About</a></li>
-        <li class="item"><a href="">Services</a></li>
-        <li class="item"><a href="">Projects</a></li>
+        <li class="item"><a href="#about">About</a></li>
+        <li class="item"><a href="#services">Services</a></li>
+        <li class="item"><a href="#footerImages">Projects</a></li>
       </ul>
 
       <ul id="socials">

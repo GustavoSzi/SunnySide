@@ -22,7 +22,8 @@
 }
 
 html{
-    scroll-behavior: smooth;}
+    scroll-behavior: smooth;
+}
 
 body{
     font-size: 18px;
@@ -34,10 +35,6 @@ ul{
 
 a{
     text-decoration: none;
-}
-
-main{
-
 }
 
 img{
@@ -79,9 +76,55 @@ header i{
     color: white;
 }
 
+
 header ul{
+    position: absolute;
+    width: 85%;
+    top: 0;
+    text-align: center;
+    background-color: white;
+    margin: 5.55rem auto;
     visibility: hidden;
-    display: none;
+    opacity: 0;
+    transition: .3s;
+}
+
+header ul.menuActive{
+    visibility: visible;
+    opacity: 1;
+}
+
+header ul li{
+    margin-top: 2.4rem;
+    font-family: var(--barlow);
+}
+
+header ul li a{
+    color: #86848f;
+}
+
+header ul .itemContact a{
+    background-color: #fad601;
+    color: #272c15;
+    font-family: var(--fraunces);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 15px 25px;
+    margin-bottom: 2.3rem;
+    border-radius: 50px;
+}
+
+#square{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -.5rem;
+    width: 35px;
+    height: 30px;
+    transform: skewY(-50deg);
+    background-color: white;
 }
 
 
@@ -133,6 +176,24 @@ header ul{
 
 #card1, #card2{
     background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.image{
+    background-size: cover;
+    width: 100%;
+    height: 20rem;
+}
+
+#card1 .image{
+    background: url('images/mobile/image-transform.jpg') center;
+    background-size: cover;
+}
+
+#card2 .image{
+    background: url('images/mobile/image-stand-out.jpg') center;
+    background-size: cover;
 }
 
 .learn{
@@ -289,4 +350,212 @@ ul#socials{
 #socials li{
     width: 1.5rem;
     display: inline-block;
+}
+
+#footerImages div{
+    width: 50%;
+    height: 15rem;
+}
+
+#img1{
+    background: url('images/mobile/image-gallery-milkbottles.jpg') center;
+    background-size: cover;
+}
+
+#img2{
+    background: url('images/mobile/image-gallery-orange.jpg') center;
+    background-size: cover;
+}
+
+#img3{
+    background: url('images/mobile/image-gallery-cone.jpg') center;
+    background-size: cover;
+}
+
+#img4{
+    background: url('images/mobile/image-gallery-sugar-cubes.jpg') center;
+    background-size: cover;
+}
+
+@media (max-width: 512px){
+    body{
+        font-size: 16px;
+    }
+
+    #home h1{
+        font-size: 2rem;
+    }
+
+    .sectionTitle{
+        font-size: 1.9rem;
+    }
+
+    .content p{
+        font-size: 1rem;
+    }
+
+    #testimonialsTitle{
+        font-size: 1rem;
+        letter-spacing: 0.17rem;
+    }
+}
+
+@media (min-width: 768px){
+    #home{
+        background: #3dbeff url('images/desktop/image-header.jpg') center bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 34rem;
+    }
+
+    #home h1{
+        font-size: 3.5rem;
+        margin-bottom: 6rem;
+    }
+
+    #home a img{
+        height: 10rem;
+        width: 4rem;
+    }
+
+    #card1 img{
+        background-image: url('images/desktop/image-transform.jpg');
+    }
+
+    #card1, #card2{
+        flex-direction: row;
+    }
+
+    #card1 img, #card2 img, .image, #card1 .content, #card2 .content{
+        width: 50%;
+        height: 30rem;
+    }
+
+    #card1 .image{
+        background: url('images/desktop/image-transform.jpg') center;
+        background-size: cover;
+    }
+
+    #card1 .content, #card2 .content{
+        padding: 5rem 4rem;
+    }
+
+    #card2 .image{
+        background: url('images/desktop/image-stand-out.jpg') center;
+        background-size: cover;
+        order: 2;
+    }
+
+    .sectionTitle{
+        width: 22rem;
+    }
+
+    .section#about {
+        padding: 0px;
+    }
+
+
+    #services{
+        flex-direction: row;
+    }
+
+    #services div{
+        width: 50%;
+        height: 35rem;
+    }
+
+    #services #graphic{
+        background: url('images/desktop/image-graphic-design.jpg') center;
+        background-repeat: no-repeat;
+    }
+
+    #services #photography{
+        background: url('images/desktop/image-photography.jpg') center;
+    }
+
+    #graphic .content,
+    #photography .content{
+        padding-top: 24rem;
+        padding-bottom: 2rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #testimonials{
+        padding-top: 8.5rem;
+    }
+
+    #testimonials #cards{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #footerImages div{
+        width: 25%;
+        height: 24.7rem;
+    }
+
+    #img1{
+        background: url('images/desktop/image-gallery-milkbottles.jpg') center;
+        background-size: cover;
+    }
+
+    #img2{
+        background: url('images/desktop/image-gallery-orange.jpg') center;
+        background-size: cover;
+    }
+
+    #img3{
+        background: url('images/desktop/image-gallery-cone.jpg') center;
+        background-size: cover;
+    }
+
+    #img4{
+        background: url('images/desktop/image-gallery-sugarcubes.jpg') center;
+        background-size: cover;
+    }
+
+    footer ul#links{
+        width: 20rem;
+        justify-content:space-around;
+    }
+
+    header{
+        justify-content: space-between;
+        padding-top: 3rem;
+        align-items: center;
+        position: absolute;
+    }
+
+    header ul{
+        visibility: visible;
+        opacity: 1;
+        background: none;
+        display: flex;
+        align-items: baseline;
+        width: 26rem;
+        position: static;
+        margin: 0;
+        top: 0;
+        right: 4rem;
+        justify-content: space-around;
+    }
+
+    #square{
+        display: none;
+    }
+
+    #menuBtn{
+        display: none;
+    }
+
+    header ul .itemContact a{
+        background-color: white;
+    }
+
+    header ul li a{
+        color: white;
+        padding: 5px;
+    }
 }
