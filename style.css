@@ -148,6 +148,12 @@ header ul .itemContact a{
     margin-bottom: 3rem;
 }
 
+#menuBtn{
+    cursor: pointer;
+}
+
+
+
 /* ABOUT */
 .sectionTitle{
     color: black;
@@ -327,6 +333,10 @@ footer #links{
     justify-content: space-between;
 }
 
+footer #links li a{
+    transition: .2s;
+}
+
 footer #lists{
     display: flex;
     flex-direction: column;
@@ -350,6 +360,10 @@ ul#socials{
 #socials li{
     width: 1.5rem;
     display: inline-block;
+}
+
+ul#socials li a{
+    transition: .2s;
 }
 
 #footerImages div{
@@ -521,6 +535,10 @@ ul#socials{
         justify-content:space-around;
     }
 
+    footer ul#links li a:hover{
+        color: white;
+    }
+
     header{
         justify-content: space-between;
         padding-top: 3rem;
@@ -552,10 +570,32 @@ ul#socials{
 
     header ul .itemContact a{
         background-color: white;
+        transition: .2s;
+    }
+
+    header ul .itemContact a:hover{
+        background-color: rgba(255, 255, 255, 0.3);
+        color: white;
     }
 
     header ul li a{
         color: white;
         padding: 5px;
+    }
+
+    .learn::before{
+        transition: .2s;
+    }
+    
+    .learn:hover::before{
+        background: rgba(255, 217, 0, 0.8);
+    }
+    
+    #card2 .learn:hover::before{
+        background: rgba(255, 0, 0, 0.8);
+    }
+
+    #socials li a:hover img{
+        filter: brightness(80);
     }
 }
