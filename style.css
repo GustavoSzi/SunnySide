@@ -5,6 +5,15 @@
 /* Fraunces */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@100;300;700;900&display=swap');
 
+@keyframes hover-link {
+    from {
+        width: 0;
+    }
+    to {
+       width: 100%;
+    }
+}
+
 /* VARIABLES*/
 :root{
     --header-heigth: 4rem;
@@ -12,6 +21,7 @@
     /* Fonts */
     --fraunces: 'Fraunces', serif;
     --barlow: 'Barlow', sans-serif;
+    --max-width: 1440px;
 }
 
 /* RESETS */
@@ -23,10 +33,14 @@
 
 html{
     scroll-behavior: smooth;
+    background-color: #90d4c5;
 }
 
 body{
     font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 ul{
@@ -45,6 +59,7 @@ img{
 /* REUSABLE CLASSES */
 .section{
     width: 100%;
+    max-width: var(--max-width);
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -57,7 +72,8 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
+    max-width: var(--max-width);
     height: var(--header-heigth);
     background: #3ebfff;
     display: flex;
@@ -101,10 +117,31 @@ header ul li{
 
 header ul li a{
     color: #86848f;
+    position: relative;
 }
 
-header ul .itemContact a{
-    background-color: #fad601;
+header ul li a::after{
+    content: '';
+    display: none;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    bottom: 0;
+    transition: .3s;
+}
+
+header ul li a:hover::after{
+    display: block;
+    animation: hover-link .5s;
+}
+
+
+header ul .itemContact button{
+    background-color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
     color: #272c15;
     font-family: var(--fraunces);
     font-weight: 700;
@@ -114,6 +151,11 @@ header ul .itemContact a{
     padding: 15px 25px;
     margin-bottom: 2.3rem;
     border-radius: 50px;
+    transition: .2s;
+}
+
+header ul .itemContact button:hover{
+    background-color: #eee;
 }
 
 #square{
@@ -271,6 +313,18 @@ header ul .itemContact a{
     flex-direction: column;
     align-items: center;
     margin-bottom: 4.8rem;
+    position: relative;
+}
+
+.testCard:not(:last-child)::after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    background-color: #eee;
+    width: 2px;
+    height: 100%;
+    border-radius: 8px;
 }
 
 .testCard img{
@@ -307,6 +361,8 @@ header ul .itemContact a{
 /* FOOTER */
 footer{
     background-color: #90d4c5;
+    width: 100%;
+    max-width: var(--max-width);
 }
 
 #footerImages{
@@ -599,3 +655,13 @@ ul#socials li a{
         filter: brightness(80);
     }
 }
+
+@media (min-width: 1442px) {
+    #home{
+        margin-top: 0;
+    }
+    header{
+        position: static;
+        margin: 0 auto;
+    }
+} 
